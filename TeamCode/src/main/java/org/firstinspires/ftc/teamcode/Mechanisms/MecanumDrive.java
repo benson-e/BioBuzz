@@ -23,8 +23,6 @@ public class MecanumDrive {
         frontLeft.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
         backLeft.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
         backRight.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
-        //W1.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
-        //W2.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
 
         imu = hwMap.get(IMU.class, "imu");
         RevHubOrientationOnRobot RevOrientation = new RevHubOrientationOnRobot(
@@ -40,24 +38,15 @@ public class MecanumDrive {
         double frontRightPower = forward + strafe - rotate;
         double backRightPower = forward - strafe - rotate;
 
-        double minPower = 0.0;
-        double maxPower = 1.0;
-        double maxSpeed = 1.0;
+       double maxPower = 1;
 
-       /* maxPower = Math.max(maxPower,Math.abs(frontLeftPower));
-        maxPower = Math.max(maxPower, Math.abs(backLeftPower));
-        maxPower = Math.max(maxPower, Math.abs(backRightPower));
-        maxPower = Math.max(maxPower, Math.abs(frontRightPower));*/
 
-//        double flPower = Math.max(minPower, frontLeftPower);
-//        double frPower = Math.max(minPower,frontRightPower);
-//        double blPower = Math.max(minPower,backLeftPower);
-//        double brPower = Math.max(minPower, backRightPower);
+        double flPower = Math.min(maxPower, frontLeftPower);
+        double frPower = Math.min(maxPower,frontRightPower);
+       double blPower = Math.min(maxPower,backLeftPower);
+       double brPower = Math.min(maxPower, backRightPower);
 
-        double flPower = frontLeftPower;
-        double frPower = frontRightPower;
-        double blPower = backLeftPower ;
-        double brPower = backRightPower ;
+
 
 
         frontLeft.setPower(flPower);
