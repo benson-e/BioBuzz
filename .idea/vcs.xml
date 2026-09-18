@@ -2,5 +2,18 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$USER_HOME$/Documents/GitHub/Decode" vcs="Git" />
+    <mapping directory="$USER_HOME$/Documents/GitHub/Decode_2025-2026" vcs="Git" />
+    <mapping directory="$USER_HOME$/Documents/GitHub/FTC-Basic-Teleop" vcs="Git" />
+    <mapping directory="$USER_HOME$/Documents/GitHub/FTCExamples2026" vcs="Git" />
+    <mapping directory="$USER_HOME$/Documents/GitHub/FTC_Limelight" vcs="Git" />
+    <mapping directory="$USER_HOME$/Documents/GitHub/FtcRobotController" vcs="Git" />
+    <mapping directory="$USER_HOME$/StudioProjects/Decode" vcs="Git" />
+    <mapping directory="$USER_HOME$/StudioProjects/Decode2025" vcs="Git" />
+    <mapping directory="$USER_HOME$/StudioProjects/Decode2025-2026" vcs="Git" />
+    <mapping directory="$USER_HOME$/StudioProjects/Decode_2025-2026" vcs="Git" />
+    <mapping directory="$USER_HOME$/StudioProjects/FtcRobotController" vcs="Git" />
+    <mapping directory="$USER_HOME$/StudioProjects/InToTheDeep" vcs="Git" />
+    <mapping directory="$USER_HOME$/StudioProjects/decode_2025-26" vcs="Git" />
   </component>
 </project>
