@@ -30,15 +30,15 @@ public class simpleAuton extends OpMode {
         frontRight.setPower(1);
         backLeft.setPower(1);
         backRight.setPower(1);
+        try {
+            sleep(1000); // this sleep fuction helps so that the robot actually goes forward/it delayed the second part so the robot goes distance
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         frontLeft.setPower(0);
         frontRight.setPower(0);
         backLeft.setPower(0);
         backRight.setPower(0);
-        try {
-            sleep(1000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
     }
 }
 
