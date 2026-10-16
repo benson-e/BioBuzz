@@ -4,15 +4,13 @@ import com.qualcomm.hardware.limelightvision.LLResult;
 import com.qualcomm.hardware.limelightvision.Limelight3A;
 import com.qualcomm.hardware.rev.RevHubOrientationOnRobot;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
-import com.qualcomm.robotcore.hardware.HardwareMap;
 import com.qualcomm.robotcore.hardware.IMU;
 
 import org.firstinspires.ftc.robotcore.external.navigation.Pose3D;
-import org.firstinspires.ftc.teamcode.Mechanisms.Turret;
-import org.firstinspires.ftc.teamcode.limelight.AprilTagLimelightMT1;
+import org.firstinspires.ftc.teamcode.Mechanisms.turretTuner;
 
 public class TurretExample extends OpMode {
-    private Turret turret = new Turret();
+    private turretTuner turret = new turretTuner();
     Limelight3A limelight;
     private IMU imu;
 
