@@ -22,7 +22,7 @@ public class Intake {
     }
     /*gets the names of the motors to allow for communication with the robot and
     tells the Dc motors to use an encoder for more accuracy */
-    private void intake(double intakePower, double midtakePower, double sidetakePower){
+    public void intake(double intakePower, double midtakePower, double sidetakePower){
         intake.setPower(intakePower);
         midtake.setPower(midtakePower);
         sidetake.setPower(sidetakePower);

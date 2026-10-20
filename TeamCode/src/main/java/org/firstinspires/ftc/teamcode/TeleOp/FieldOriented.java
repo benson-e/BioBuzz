@@ -3,6 +3,7 @@ package org.firstinspires.ftc.teamcode.TeleOp;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
+import org.firstinspires.ftc.teamcode.Mechanisms.Intake;
 import org.firstinspires.ftc.teamcode.Mechanisms.MecanumDrive;
 
 @TeleOp
@@ -31,7 +32,7 @@ public class FieldOriented extends OpMode {
         }
 
         drive.driveFieldRelative(forward,strafe,rotate);
-        intake.intake(intakePower); //intake in white refers to the method inside Intake
+      //  intake.intake(); //intake in white refers to the method inside Intake
 
     }
 }
