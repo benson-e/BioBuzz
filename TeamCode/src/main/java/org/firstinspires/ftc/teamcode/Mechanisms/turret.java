@@ -6,7 +6,7 @@ import com.qualcomm.robotcore.hardware.HardwareMap;
 import com.qualcomm.robotcore.util.ElapsedTime;
 import com.qualcomm.robotcore.util.Range;
 
-public class turretTuner {
+public class turret {
     private DcMotor turret;
     private double kP = 0.0001;
     private double kD = 0.0000;

@@ -18,22 +18,20 @@ public class Shooting {
      private Servo gate;
 
      public void init(HardwareMap hwMap){
-         midtake = hwMap.get(DcMotor.class, "W2");
-         midtake.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+         //took out midtake and gate so hardware map isnt twice
          flywheel = hwMap.get(DcMotor.class, "W5");
          flywheel.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
          swivel = hwMap.get(DcMotor.class, "W6");
          swivel.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
-         gate = hwMap.get(Servo.class, "W4");
+
      }
 
-     private void shooting(double midtakePower, double flywheelPower, double swivelPower){
+     public void shooting(double midtakePower, double flywheelPower){
          midtake.setPower(midtakePower);
          flywheel.setPower(flywheelPower);
-         swivel.setPower(swivelPower);
      }
 
-     private void gateOpen(double gateAngle){
+     public void gateOpen(double gateAngle){
          gate.setPosition(gateAngle);
      }
 }

@@ -28,7 +28,7 @@ public class Intake {
         sidetake.setPower(sidetakePower);
     }
     //sets the power of the different motors to control speed
-    private void gateClose(double gateAngle){
+    public void gateClose(double gateAngle){
         gate.setPosition(gateAngle);
     }
     //sets the angle of the gate to closed while the intake is running

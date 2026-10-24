@@ -7,10 +7,10 @@ import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.hardware.IMU;
 
 import org.firstinspires.ftc.robotcore.external.navigation.Pose3D;
-import org.firstinspires.ftc.teamcode.Mechanisms.turretTuner;
+import org.firstinspires.ftc.teamcode.Mechanisms.turret;
 
 public class TurretExample extends OpMode {
-    private turretTuner turret = new turretTuner();
+    private turret turret = new turret();
     Limelight3A limelight;
     private IMU imu;
 
