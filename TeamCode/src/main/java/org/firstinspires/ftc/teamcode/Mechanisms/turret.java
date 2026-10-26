@@ -15,11 +15,13 @@ public class turret {
     private double angleTolerance = 0.2;
     private final double MAX_POWER = 0.6;
     private double power = 0;
+    private double ticksPerRev, MAX_REVS; //need to figure max revs
     private final ElapsedTime timer = new ElapsedTime();
 
     public void init(HardwareMap hwMap){
         turret = hwMap.get(DcMotor.class, "turret");
-        turret.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+        turret.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER); //without on video example
+        ticksPerRev = turret.getMotorType().getTicksPerRev();
     }
 
     public void setkp (double newKP){
@@ -40,6 +42,10 @@ public class turret {
 
     public void resetTimer(){
         timer.reset();
+    }
+
+    public double getTurretRevs(){
+        return turret.getCurrentPosition() / ticksPerRev; //account for gear ratio
     }
 
     public void update(LLResult llresult ){
@@ -68,7 +74,13 @@ public class turret {
 
         }
 
-        // SAFETIES TO MAKE SURE YOU'RE NOT ROTATING PAST
+        if(getTurretRevs()>= MAX_REVS){
+            power = 0;
+            //opposite power idk
+
+        }
+
+
 
         turret.setPower(power);
         lastError = error;

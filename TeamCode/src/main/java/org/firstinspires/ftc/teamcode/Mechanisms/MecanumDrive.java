@@ -43,8 +43,8 @@ public class MecanumDrive {
 
         double flPower = Math.min(maxPower, frontLeftPower);
         double frPower = Math.min(maxPower,frontRightPower);
-       double blPower = Math.min(maxPower,backLeftPower);
-       double brPower = Math.min(maxPower, backRightPower);
+        double blPower = Math.min(maxPower,backLeftPower);
+        double brPower = Math.min(maxPower, backRightPower);
 
 
 

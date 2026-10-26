@@ -8,7 +8,7 @@ import com.qualcomm.robotcore.hardware.Servo;
 
 public class Intake {
     private DcMotor intake, midtake;
-    private CRServo sidetake;
+    private CRServo sidetake1, sidetake2;
     private Servo gate;
 //creates the variables for the motors
 
@@ -17,7 +17,8 @@ public class Intake {
         intake.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
         midtake = hwMap.get(DcMotor.class, "W2");
         midtake.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
-        sidetake = hwMap.get(CRServo.class, "W3");
+        sidetake1 = hwMap.get(CRServo.class, "sl");
+        sidetake2 = hwMap.get(CRServo.class, "sr");
         gate = hwMap.get(Servo.class, "W4");
     }
     /*gets the names of the motors to allow for communication with the robot and
@@ -25,7 +26,8 @@ public class Intake {
     public void intake(double intakePower, double midtakePower, double sidetakePower){
         intake.setPower(intakePower);
         midtake.setPower(midtakePower);
-        sidetake.setPower(sidetakePower);
+        sidetake1.setPower(sidetakePower);
+        sidetake2.setPower(-sidetakePower);
     }
     //sets the power of the different motors to control speed
     public void gateClose(double gateAngle){
